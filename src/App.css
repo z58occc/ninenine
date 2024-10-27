@@ -9,17 +9,14 @@
 }
 
 .big-number {
-  margin-top: -34px;
+  margin-top: -34px;/*可以讓單一元素中看起來有不同的padding*/
   margin-left: 61px;
   width: 71px;
   height: 153px;
   text-align: left;
   font: normal normal bold 128px/128px Helvetica Neue;
-  box-sizing: border-box;
   color: #2EB738;
   text-shadow: 4px 3px 0px #F0F0F0;
-
-
 }
 
 .small-number {
@@ -38,8 +35,6 @@ footer {
   background-color: #2EB738;
   height: 34px;
   padding: 8px 85px 8px 843px;
-
-
 }
 
 .footer {
@@ -53,7 +48,6 @@ footer {
 .logo {
   max-width: 350px;
   height: 366px;
-  margin: 0px;
 }
 
 .inside-logo {
@@ -62,7 +56,6 @@ footer {
   margin: 14px 21px;
   border-top: 1px solid #2EB738;
   border-bottom: 1px solid #2EB738;
-
 }
 
 .x-box {

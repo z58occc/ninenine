@@ -6,17 +6,16 @@ function App() {
   const [arr, setArr] = useState([]);
   let newArr = [];
   let thirdArr = [];
-  useEffect(() => {
-    for (let x = 2; x <= 9; x++) {
-      for (let i = 1; i <= 9; i++) {
-        newArr.push(`${x} x ${i} = ${x * i}`);
+  useEffect(() => {//一開始先跑一次
+    for (let x = 2; x <= 9; x++) {// (x * i 跑九次)跑8次
+      for (let i = 1; i <= 9; i++) {//x * i 跑九次
+        newArr.push(`${x} x ${i} = ${x * i}`);//一開始建立2~9的九九乘法表 存到newArr
       }
     }
     for (let i = 0; i < newArr.length; i += 9) {
-      thirdArr.push(newArr.slice(i, i + 9));
+      thirdArr.push(newArr.slice(i, i + 9));//分成8個 存入thirdArr 形成一個二維陣列
     }
-    console.log(thirdArr);
-    setArr(thirdArr);
+    setArr(thirdArr);//用set存入arr 不然react不會刷新
   }, [])
 
 
@@ -28,12 +27,12 @@ function App() {
         style={{
           backgroundColor: "#F0F0F0",
           padding: '80px 85px 80px 85px',//上 右 下 左
-          columnGap: "30px",
+          columnGap: "30px",//row col的間隙
           rowGap: '40px'
         }}>
         <div className=' col-4 logo d-flex position-relative'
           style={{
-            maxWidth: '350px'//順位問題 下在這邊順位比較高（比較優先）
+            maxWidth: '350px'//順位問題 下在這邊順位比較高（比較優先） 外部css可能會被boostrap蓋過去
           }}>
           <div className='x-box'>
             x
@@ -60,15 +59,18 @@ function App() {
           return (
             <div key={i} className='col-4'
               style={{
-                maxWidth: '350px'
+                maxWidth: '350px'//maxwidth 保留col-4的排版 然後設定col-4的大小
               }}>
               <div className='ninenine-card  d-flex flex-column flex-wrap'>
+                {/* flex-wrap 換行 要注意下在哪一層*/}
+                {/* border會吃掉2px空間 可能導致跑版 要注意 */}
                 <div className='big-number d-flex align-items-center'>
                   {i + 2}
                 </div>
                 {nums.map((num) => {
                   return (
                     <div className=' small-number text-nowrap '>
+                      {/* text-nowrap 不換行 */}
                       {num}
                     </div>
                   )
