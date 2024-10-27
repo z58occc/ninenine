@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ninenine/static/css/main.f00ef2e4.css",
+    "main.js": "/ninenine/static/js/main.674ec299.js",
+    "static/js/453.3f634ba2.chunk.js": "/ninenine/static/js/453.3f634ba2.chunk.js",
+    "index.html": "/ninenine/index.html",
+    "main.f00ef2e4.css.map": "/ninenine/static/css/main.f00ef2e4.css.map",
+    "main.674ec299.js.map": "/ninenine/static/js/main.674ec299.js.map",
+    "453.3f634ba2.chunk.js.map": "/ninenine/static/js/453.3f634ba2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f00ef2e4.css",
+    "static/js/main.674ec299.js"
+  ]
+}
